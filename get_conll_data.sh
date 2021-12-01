@@ -38,12 +38,12 @@ fi
 
 cd $downloads_dir
 #This part does not work in the script, it needs to be called separately
-curl -O https://cemantix.org/conll/2012/download/conll-2012-train.v4.tar.gz
-curl -O https://cemantix.org/conll/2012/download/conll-2012-development.v4.tar.gz
-curl -O https://cemantix.org/conll/2012/download/test/conll-2012-test-official.v9.tar.gz
-curl -O https://cemantix.org/conll/2012/download/test/conll-2012-test-supplementary.v9.tar.gz
-curl -O https://cemantix.org/conll/2012/download/test/conll-2012-test-key.tar.gz
-curl -O https://cemantix.org/conll/2012/download/conll-2012-scripts.v3.tar.gz
+#curl -O https://cemantix.org/conll/2012/download/conll-2012-train.v4.tar.gz
+#curl -O https://cemantix.org/conll/2012/download/conll-2012-development.v4.tar.gz
+#curl -O https://cemantix.org/conll/2012/download/test/conll-2012-test-official.v9.tar.gz
+#curl -O https://cemantix.org/conll/2012/download/test/conll-2012-test-supplementary.v9.tar.gz
+#curl -O https://cemantix.org/conll/2012/download/test/conll-2012-test-key.tar.gz
+#curl -O https://cemantix.org/conll/2012/download/conll-2012-scripts.v3.tar.gz
 
 cd $original_dir
 

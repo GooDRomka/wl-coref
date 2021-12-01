@@ -85,7 +85,9 @@ if __name__ == "__main__":
         model.load_weights(path=args.weights, map_location="cpu",
                            ignore={"bert_optimizer", "general_optimizer",
                                    "bert_scheduler", "general_scheduler"})
-        model.predict()
+        text = ["My","name","is","Roma",".","I","love","you"]
+        sent_ids = [0,0,0,0,0,1,1,1]
+        model.predict(text,sent_ids)
     else:
         model.load_weights(path=args.weights, map_location="cpu",
                            ignore={"bert_optimizer", "general_optimizer",
