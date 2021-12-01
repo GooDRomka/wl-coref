@@ -82,8 +82,7 @@ class CorefModel:  # pylint: disable=too-many-instance-attributes
         self._set_training(new_value)
 
     # ========================================================== Public methods
-    def predict(self, text, sent_ids):
-        doc = doc_from_text(text, sent_ids)
+    def predict(self, doc):
         doc = self._tokenize_docs_talisman(doc)
         prediction = self.run(doc)
         for cluster in prediction.span_clusters:
@@ -91,7 +90,7 @@ class CorefModel:  # pylint: disable=too-many-instance-attributes
             for span in cluster:
                 word = []
                 for i in range(span[0],span[1]):
-                   word.append(text[i])
+                   word.append(doc["cased_words"][i])
                 cluster_word.append(word)
             print(cluster_word)
         print("\nresult", prediction.word_clusters,"\n\n", prediction.span_clusters)
